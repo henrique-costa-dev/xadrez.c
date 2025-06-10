@@ -2,17 +2,22 @@
  
 int main() {
  
-    int numero, i;
+    int index;
 
-    printf("Digite um numero para calcularmos a tabuada... \n");
-    scanf("%d", &numero);
+    char * nomesAlunos [3][3] = {
+           {"Aluno 1", "Pt: 30", "Mat: 90"},
+           {"Aluno 2", "Pt: 60", "Mat: 60"},
+           {"Aluno 3", "Pt: 90", "Mat: 30"}
+    };
 
-    for (i = 0; i <= 10; i++)
-    {
-        printf("%d x %d = %d \n", i, numero, i * numero);
+    printf("Digite o numero do aluno que queira ver as notas...\n");
+    printf("Para o aluno 0, digite 0 \n");
+    printf("Para o aluno 1, digite 1 \n");
+    printf("Para o aluno 2, digite 2 \n");
 
-    }
-    
+    scanf("%d", &index);
+
+    printf("As notas do %s são: %s , %s \n", nomesAlunos[index][0], nomesAlunos[index][1], nomesAlunos[index][2]);
 
     return 0;
 }
